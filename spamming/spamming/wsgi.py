@@ -7,10 +7,12 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.9/howto/deployment/wsgi/
 """
 
-import os
+import os, sys, site
+
+SITE_DIR = '/home/ubuntu/My_Portfolio/'
+site.addsitedir(SITE_DIR)
+sys.path.append(SITE_DIR)
+os.environ['DJANGO_SETTINGS_MODULE'] = 'spamming.spamming.settings.production.py'
 
 from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "spamming.settings")
-
 application = get_wsgi_application()
