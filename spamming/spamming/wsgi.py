@@ -12,7 +12,7 @@ import os, sys, site
 SITE_DIR = '/home/ubuntu/My_Portfolio/'
 site.addsitedir(SITE_DIR)
 sys.path.append(SITE_DIR)
-os.environ['DJANGO_SETTINGS_MODULE'] = 'spamming.settings.production'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'spamming.settings'
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
