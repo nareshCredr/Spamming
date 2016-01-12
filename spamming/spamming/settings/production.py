@@ -7,7 +7,7 @@ SECRET_KEY = '0)-6_948xc+g!=!$j^#ad0a)1pf#%ge*41!&om8m2r#r^v@nd2'
 DEBUG = False
 
 ALLOWED_HOSTS = []
-
+ROOT_URLCONF = 'spamming.urls'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
